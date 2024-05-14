@@ -22,10 +22,8 @@
     while ($row = $result->fetch_assoc()) {
     echo "<option value='" . $row["id"] . "'>" . $row["name"] . "</option>";
     }
-
-    // データベース接続を閉じる
-    $db->close();
-
+    ?>
+    <a href='radio.html'>戻る</a>
 </body>
 
 </html>

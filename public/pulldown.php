@@ -8,22 +8,13 @@
     <title>pulldown.php</title>
 </head>
 
-<body>
-    <?php
 
     // データベース接続
-    $db = new mysqli("localhost", "username", "password", "database");
-
-    // データ取得
-    $sql = "SELECT * FROM mytable";
-    $result = $db->query($sql);
-
-    // プルダウンメニューの選択肢生成
-    while ($row = $result->fetch_assoc()) {
-    echo "<option value='" . $row["id"] . "'>" . $row["name"] . "</option>";
-    }
+<body>
+    <?php
+    echo  '<p>あなたの好きなフルーツは、'  . $_POST['fruit']  . 'ですね。</p>';
     ?>
-    <a href='radio.html'>戻る</a>
+    <a href='pulldown.html'>戻る</a>
 </body>
 
 </html>

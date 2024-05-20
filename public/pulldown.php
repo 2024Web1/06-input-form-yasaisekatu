@@ -9,11 +9,18 @@
 </head>
 
 
-    // データベース接続
+
 <body>
-    <?php
-    echo  '<p>あなたの好きなフルーツは、'  . $_POST['fruit']  . 'ですね。</p>';
-    ?>
+<?php
+// 送信された値を取得
+$fruit = $_POST['fruit'];
+
+// 出力テキストを作成
+$output = "<p>あなたの好きなフルーツは、{$fruit}ですね。</p>";
+
+// 出力
+echo $output;
+?>
     <a href='pulldown.html'>戻る</a>
 </body>
 
